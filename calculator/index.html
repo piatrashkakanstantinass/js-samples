@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display">
+            000
+        </div>
+        <div class="buttons">
+            <div class="digit-section">
+                <div class="digit-row">
+                    <button type="button" data-value="7">7</button>
+                    <button type="button" data-value="8">8</button>
+                    <button type="button" data-value="9">9</button>
+                </div class="digit-row">
+                <div class="digit-row">
+                    <button type="button" data-value="4">4</button>
+                    <button type="button" data-value="5">5</button>
+                    <button type="button" data-value="6">6</button>
+                </div class="digit-row">
+                <div class="digit-row">
+                    <button type="button" data-value="1">1</button>
+                    <button type="button" data-value="2">2</button>
+                    <button type="button" data-value="3">3</button>
+                </div class="digit-row">
+                <div class="digit-row">
+                    <button type="button" data-value="0">0</button>
+                    <button type="button" data-action="period">.</button>
+                    <button type="button" data-action="sign">±</button>
+                </div class="digit-row">
+            </div>
+            <div class="operation-section">
+                <div class="operation-row">
+                    <button type="button" data-action="plus">+</button>
+                    <button type="button" data-action="minus">-</button>
+                </div>
+                <div class="operation-row">
+                    <button type="button" data-action="multiply">×</button>
+                    <button type="button" data-action="divide">÷</button>
+                </div>
+                <div class="operation-row">
+                    <button type="button" data-action="clear">C</button>
+                    <button type="button" class="equal-button" data-action="compute">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
