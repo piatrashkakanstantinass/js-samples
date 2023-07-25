@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    color: #FEFAE0;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    padding: 0.3em 0;
+}
+
+body {
+    background-color: #606C38;
+    min-height: 100vh;
+    padding: 0 1em;
+}
+
+.sample-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sample-container a {
+    text-decoration: none;
+}
+
+.sample {
+    min-width: 300px;
+    min-height: 300px;
+    background-color: #283618;
+    border-radius: 15px;
+}
+
+.sample img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.sample figcaption {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+}
