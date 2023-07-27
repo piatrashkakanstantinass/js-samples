@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --logo-fg: #fcfcfc;
+    --bg: #f9fafb;
+    --form-bg: #fff;
+    --label-fg: #5f5f60;
+    --button-bg: #596d48;
+    --button-active-bg: #8aa374;
+}
+
+@font-face {
+    font-family: "Norse";
+    src: url("Norse-Bold.otf");
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--bg);
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.background {
+    flex: 1;
+    height: 100vh;
+    background: url("background.jpg") 0 0 / cover no-repeat;
+    position: sticky;
+    top: 0px;
+}
+
+.content {
+    flex: 2;
+}
+
+.logo-container {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--logo-fg);
+    height: 2em;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font: 50px "Norse";
+    padding: 10px 0;
+}
+
+.logo-container img {
+    max-height: 100%;
+}
+
+.background .bg-info {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    color: var(--logo-fg);
+    width: 100%;
+    text-align: center;
+    font-size: smaller;
+}
+
+.background a {
+    color: unset;
+}
+
+.background a:visited {
+    color: unset;
+}
+
+
+.content section {
+    padding: 30px;
+    padding-right: calc(100% - 500px);
+}
+
+.content section.intro {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    font-weight: bold;
+    padding-top: 100px;
+}
+
+.form {
+    background: var(--form-bg);
+}
+
+input {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    height: 1.5rem;
+}
+
+input:focus {
+    box-shadow: 2px 2px 4px #000;
+    border-color: red;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:invalid + span::before {
+    color: red;
+    text-transform: none;
+    content: "* Required";
+}
+
+input.wrong + span::before {
+    content: "* Passwords do not match";
+}
+
+.form-row {
+    display: flex;
+    gap: 40px;
+}
+
+label {
+    text-transform: uppercase;
+    color: var(--label-fg);
+    font-size: 12px;
+}
+
+.form-row + .form-row {
+    margin-top: 20px;
+}
+
+button {
+    background: var(--button-bg);
+    color: var(--logo-fg);
+    border-radius: 5px;
+    padding: 10px 30px;
+    border: none;
+    box-shadow: 2px 2px 4px #000;
+}
+
+button:hover,
+button:active {
+    background-color: var(--button-active-bg);
+    cursor: pointer;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: var(--button-bg);
+}
+
+@media (max-width: 750px) {
+    .background {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-row {
+        flex-flow: column;
+        gap: 0px;
+    }
+
+    .form-row label + label {
+        margin-top: 20px;
+    }
+}

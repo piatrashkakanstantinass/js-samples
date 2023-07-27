@@ -18,6 +18,7 @@ body {
 .sample-container {
     display: flex;
     flex-flow: row wrap;
+    gap: 20px;
 }
 
 .sample-container a {
@@ -25,13 +26,25 @@ body {
 }
 
 .sample {
-    min-width: 300px;
-    min-height: 300px;
+    width: 300px;
+    height: 300px;
     background-color: #283618;
     border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .sample img {
+    max-width: 100%;
+    max-height: 80%;
     width: 200px;
     margin: 10px;
     border-radius: 15px;
