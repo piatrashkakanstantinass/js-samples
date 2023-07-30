@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid;
+}
+
+label {
+    display: block;
+}
